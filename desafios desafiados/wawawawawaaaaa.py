@@ -1,37 +1,118 @@
+#control codes cheat sheet
 
-
-#tente dizer preto
-print("\033[30m Preto! \033[0m");
-#tente dizer vermelho
-print("\033[31m Vermelho! \033[0m");
-#tente dizer verde
-print("\033[32m Verde! \033[0m");
-#tente dizer amarelo
-print("\033[33m Amarelo! \033[0m");
-#tente dizer azul
+#foreground is mumber 3_
 print("\033[34m Azul! \033[0m");
-#tente dizer roxo
-print("\033[35m Roxo! \033[0m");
-#tente dizer ciano
-print("\033[36m Ciano! \033[0m");
-#tente dizer branco
-print("\033[37m Branco! \033[0m");
-#tente dizer bleeeh
-print("\033[9m teste! \033[0m");
-#tente dizer bleeeh
-print("\033[2m teste! \033[0m");
-#tente dizer bleeeh
-print("\033[2m teste! \033[0m");
+#light foreground is mumber 9_
+print("\033[94m Azul! \033[0m");
+#background is mumber 4_
+print("\033[44m Azul! \033[0m");
+#light background is mumber 10_
+print("\033[104m Azul! \033[0m");
+print()
 
+#You can combine them with ";"
+print("\033[43;34m Amarelo e azul! \033[0m");
+print("\033[3;43;34m Amarelo, azul e itálico! \033[0m");
+
+print()
+#preto is mumber _0
+print("\033[30m Preto! \033[0m");
+#vermelho is mumber _1
+print("\033[31m Vermelho! \033[0m");
+#verde is mumber _2
+print("\033[32m Verde! \033[0m");
+#amarelo is mumber _3
+print("\033[33m Amarelo! \033[0m");
+#azul is mumber _4
+print("\033[34m Azul! \033[0m");
+#roxo is mumber _5
+print("\033[35m Roxo! \033[0m");
+#ciano is mumber _6
+print("\033[36m Ciano! \033[0m");
+#branco is mumber _7
+print("\033[37m Branco! \033[0m");
+print()
+
+#control _
+print("\033[0m normal! \033[0m");
+#bold is mumber 1
+print("\033[1m Bold! \033[0m");
+#dim is mumber 2
+print("\033[2m dim! \033[0m");
+#italic is mumber 3
+print("\033[3m italic! \033[0m");
+#underline is mumber 4
+print("\033[4m underline! \033[0m");
+#blink is mumber 5, but it doesn't work in most terminals
+print("\033[5m please blink!? \033[0m");
+#Inverse is mumber 7, but it doesn't work in some terminals ig
+print("\033[7m inverse! \033[0m");
+#invisible is mumber 8
+print("this text >\033[8m o jogo \033[0m< is invisible!");
+#trikethrough is mumber 9
+print("\033[9m strikethrough! \033[0m");
+#what on earth is mumber 21
+print("\033[21m WHAT! \033[0m");
+print()
 print("""
-\033[31m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ \033[0m
-\033[31m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ \033[0m
+\033[31m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ \033[0m
 \033[33m⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋\033[0m\033[34m⣀⣠⣤⣤⣄⣀\033[0m\033[33m⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
 \033[33m⣿⣿⣿⣿⣿⣿⠿⠛⠉⠄\033[0m\033[34m⢠⣾⣿⣿⣿⣿⣿⣿⣷⡄\033[0m\033[33m⠄⠉⠛⠿⣿⣿⣿⣿⣿⣿\033[0m
-\033[32m⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄\033[0m\033[34m⣔⣷⣷⣦⣤⣬⣹⡛⠿⣿⡄\033[0m\033[32m⠄⠄⠄⠄⠙⠿⣿⣿⣿\033[0m
-\033[32m⣿⣿⣿⣶⣄⡀⠄⠄⠄⠄\033[0m\033[34m⣿⣻⢿⣿⣿⣟⣿⣿⡾⣌⠁\033[0m\033[32m⠄⠄⠄⠄⣠⣴⣿⣿⣿\033[0m
-\033[36m⣿⣿⣿⣿⣿⣿⣶⣤⡀⠄\033[0m\033[34m⠘⢿⣿⣿⣿⣿⣽⣏⡿⠃\033[0m\033[36m⠄⢀⣤⣶⣿⣿⣿⣿⣿⣿\033[0m
+\033[92m⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄\033[0m\033[34m⣔⣷⣷⣦⣤⣬⣹⡛⠿⣿⡄\033[0m\033[32m⠄⠄⠄⠄⠙⠿⣿⣿⣿\033[0m
+\033[92m⣿⣿⣿⣶⣄⡀⠄⠄⠄⠄\033[0m\033[34m⣿⣻⢿⣿⣿⣟⣿⣿⡾⣌⠁\033[0m\033[32m⠄⠄⠄⠄⣠⣴⣿⣿⣿\033[0m
+\033[34m⣿⣿⣿⣿⣿⣿⣶⣤⡀⠄\033[0m\033[34m⠘⢿⣿⣿⣿⣿⣽⣏⡿⠃\033[0m\033[36m⠄⢀⣤⣶⣿⣿⣿⣿⣿⣿\033[0m
 \033[34m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄\033[0m\033[34m⠉⠙⠛⠛⠛⠉\033[0m\033[34m⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
 \033[35m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
 \033[35m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+""")
+
+#There's an extended color palette with 256 colors
+#using 38;5;_ _ _ for foreground and 48;5;_ _ _ for background
+#replace the _ _ _ with a number from 0 to 255
+print("\033[38;5;196m Vermelho! \033[0m");
+print("\033[38;5;202m Laranja! \033[0m");
+print("\033[38;5;226m Amarelo! \033[0m");
+print("\033[38;5;40m Verde! \033[0m");
+print("\033[38;5;27m Azul! \033[0m");
+print("\033[38;5;128m Roxo! \033[0m");
+
+
+print("""
+\033[38;5;196m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ \033[0m
+\033[38;5;202m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;214m⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋\033[0m\033[38;5;21m⣀⣠⣤⣤⣄⣀\033[0m\033[38;5;214m⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;226m⣿⣿⣿⣿⣿⣿⠿⠛⠉\033[0m\033[38;5;226m⠒\033[0m\033[38;5;21m⢠⣾⣿⣿⣿⣿⣿⣿⣷⡄\033[0m\033[38;5;226m⠒⠉⠛⠿⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;154m⣿⣿⣿⠿⠛⠁\033[0m\033[38;5;226m⠒⠒⠒⠒\033[0m\033[38;5;21m⣔⣷⣷⣦⣤⣬⣹⡛⠿⣿⡄\033[0m\033[38;5;226m⠒⠒⠒⠒\033[0m\033[38;5;154m⠙⠿⣿⣿⣿\033[0m
+\033[38;5;40m⣿⣿⣿⣶⣄⡀\033[0m\033[38;5;226m⠒⠒⠒⠒\033[0m\033[38;5;21m⣿⣻⢿⣿⣿⣟⣿⣿⡾⣌⠁\033[0m\033[38;5;226m⠒⠒⠒⠒\033[0m\033[38;5;40m⣠⣴⣿⣿⣿\033[0m
+\033[38;5;29m⣿⣿⣿⣿⣿⣿⣶⣤⡀\033[0m\033[38;5;226m⠒\033[0m\033[38;5;21m⠘⢿⣿⣿⣿⣿⣽⣏⡿⠃\033[0m\033[38;5;226m⠒\033[0m\033[38;5;29m⢀⣤⣶⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;21m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄\033[0m\033[38;5;21m⠉⠙⠛⠛⠛⠉\033[0m\033[38;5;21m⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;56m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+\033[38;5;92m⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\033[0m
+""")
+
+
+print("""
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⣠⣴⣿⣿⣶⣄⡀⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⢀⣤⣶⣿⣀⣠⣤⣤⣄⣀⣿⣶⣤⡀⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠿⠛⠉⣀⣴⣾⣿⣿⢠⣾⣿⣿⣿⣿⣿⣿⣷⡄⣿⣷⣦⣄⠉⠛⠿⣿⣿⣿⣿⣿
+⣿⣿⣿⠿⠛⠁⣠⣴⣾⣿⣿⣿⣿⠄⣔⣷⣷⣦⣤⣬⣹⡛⠿⣿⡄⣿⣿⣿⣷⣦⣄⠙⠿⣿⣿⣿
+⣿⣿⣿⣶⣄⡀⠙⠻⣿⣿⣿⣿⣿⠄⣿⣻⢿⣿⣿⣟⣿⣿⡾⣌⠁⣿⣿⣿⣿⠟⠋⣠⣴⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣶⣤⡀⠉⠻⢿⣿⠄⠘⢿⣿⣿⣿⣿⣽⣏⡿⠃⣿⡿⠟⠋⢀⣤⣶⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠉⠛⠿⣿⠉⠙⠛⠛⠛⠉⣿⠿⠛⠉⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠙⠿⣿⠿⠛⠁⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+
+             
+                           
+              ⣠⣴⣿⣿⣶⣄⡀
+         ⢀⣤⣶⣿⣀⣠⣤⣤⣄⣀⣿⣶⣤⡀
+     ⣀⣴⣾⣿⣿⢠⣾⣿⣿⣿⣿⣿⣿⣷⡄⣿⣷⣦⣄
+ ⣠⣴⣾⣿⣿⣿⣿⠄⣔⣷⣷⣦⣤⣬⣹⡛⠿⣿⡄⣿⣿⣿⣷⣦⣄               
+ ⠙⠻⣿⣿⣿⣿⣿⠄⣿⣻⢿⣿⣿⣟⣿⣿⡾⣌⠁⣿⣿⣿⣿⠟⠋
+     ⠉⠻⢿⣿⠄⠘⢿⣿⣿⣿⣿⣽⣏⡿⠃⣿⡿⠟⠋
+         ⠉⠛⠿⣿⠉⠙⠛⠛⠛⠉⣿⠿⠛⠉
+               ⠙⠿⣿⠿⠛⠁
+        
 """)
