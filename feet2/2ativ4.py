@@ -1,9 +1,15 @@
 x=0
 y=int(input("Digite um número: "))
-while x!=y and x!=y-1 and x!=y+1:
-    print(x)
-    if y>x:
+if y>x:
+    while x!=y and x!=y-1:
+        print (x)
         x=x+2
-    else:
+elif y<x:
+    while x!=y and x!=y+1:
+        print (x)
         x=x-2
-print(y)
+        
+if x==y-1 or x==y+1:
+    print (x)
+else:
+    print(y)
