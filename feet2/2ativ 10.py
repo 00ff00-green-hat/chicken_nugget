@@ -12,6 +12,7 @@ while x!=0:
     if x!=0:
         y=y+1
     z=z+x
-print(y)
-print(z)
-print(z/y)
+print()
+print(str(y)+" números digitados.")
+print(str(z)+" é a soma.")
+print(str(z/y)+" é a média.")

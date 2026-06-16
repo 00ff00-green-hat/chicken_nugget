@@ -1,38 +1,67 @@
-# 11 – Faça um programa para controlar o caixa de uma cantina. Seu programa deve
-# solicitar ao usuário o código do produto pedido e a quantidade comprada. Suponha que
-# para cada compra, apenas um tipo de produto possa ser comprado. O programa deve ser
-# interrompido caso o usuário digite 0. Para cada compra, seu programa deve exibir na tela
-# o nome do produto comprado e o valor total da compra. Ao final do programa, deve exibir
-# o valor total acumulado no caixa. Utilize a seguinte tabela de produtos como referência:
-# Código Produto Valor
-# 1 Suco R$ 6,00
-# 2 Pão de queijo R$ 3,00
-# 3 Pastel R$ 7,00
-# 4 Salada de frutas R$ 9,00
-# 5 Café com leite R$ 3,50
-# 6 Cappuccino R$ 4,50
-# 7 Iogurte R$ 6,50
-# 8 Água R$ 2,50
-import sys
-p=int(input("Digite o codigo do produto: "))
-q=int(input("Digite a quantidade do produto: "))
-if q==0:
-    sys.exit()
-elif p==1:
-    v=6*q
-    print("")
-elif p==2:
-    v=3*q
-elif p==3:
-    v=7*q
-elif p==4:
-    v=9*q
-elif p==5:
-    v=3.5*q
-elif p==6:
-    v=4.5*q
-elif p==7:
-    v=6.5*q
-elif p==8:
-    v=2.5*q    
+# 12 – Implemente um programa que funcione como uma calculadora entre dois números
+# informados. Seu programa deve exibir um menu que solicite a operação a ser realizada
+# entre dois números (adição, subtração, divisão e multiplicação) e os dois números a
+# serem utilizados no cálculo. Se o usuário digitar uma opção inválida, deve alertar o
+# usuário e exibir o menu novamente. Utilize um menu, como o abaixo, no seu programa:
+# Menu
+# -------
+# 1 – Adição
+# 2 – Subtração
+# 3 – Divisão
+# 4 – Multiplicação
+# 0 - Sair
+# Digite a opção:
+# Alguns desses exercícios são de autoria do professor e outros foram selecionados pelo no
+# livro Introdução à Programação com Python de Nilo Ney Coutinho Menezes. Para mais
+# exercícios, consulte os capítulos 3 e 4 do livro.
 
+while True:
+    # Exibição do Menu conforme o enunciado
+    print("\nMenu")
+    print("-------")
+    print("1 – Adição")
+    print("2 – Subtração")
+    print("3 – Divisão")
+    print("4 – Multiplicação")
+    print("0 - Sair")
+    
+    opcao = input("Digite a opção: ")
+    
+    # Verifica se o usuário deseja sair do programa
+    if opcao == '0':
+        print("Programa encerrado. Até logo!")
+        break
+        
+    # Verifica se a opção digitada é inválida
+    if opcao not in ['1', '2', '3', '4']:
+        print("\n[ERRO] Opção inválida! Por favor, escolha uma opção do menu.")
+        continue  # Exibe o menu novamente sem pedir os números
+        
+    # Solicita os números apenas se a opção for válida
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+    except ValueError:
+        print("\n[ERRO] Entrada inválida! Por favor, digite números válidos.")
+        continue
+
+    # Executa a operação escolhida
+    if opcao == '1':
+        resultado = num1 + num2
+        print(f"\nResultado: {num1} + {num2} = {resultado}")
+        
+    elif opcao == '2':
+        resultado = num1 - num2
+        print(f"\nResultado: {num1} - {num2} = {resultado}")
+        
+    elif opcao == '3':
+        # Validação para evitar a divisão por zero
+        if num2 == 0:
+            print("\n[ERRO] Não é possível dividir por zero!")
+        else:
+            resultado = num1 / num2
+            print(f"\nResultado: {num1} / {num2} = {resultado}")
+            
+    elif opcao == '4':
+        resultado = num1 * num2
+        print(f"\nResultado: {num1} * {num2} = {resultado}")

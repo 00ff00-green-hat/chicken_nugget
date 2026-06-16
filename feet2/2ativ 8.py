@@ -7,3 +7,13 @@
 # A título de curiosidade, simule sua dívida final no prazo de 2 anos (24 meses).
 
 print("Não")
+
+v = 1000.00
+tj = 0.1530 
+
+x = int(input("Digite a quantidade de meses: "))
+
+d = v
+
+print(f"A dívida total após {x} meses será de R$ {d:,.2f}")
+print("Vocẽ deve "+ str(d))

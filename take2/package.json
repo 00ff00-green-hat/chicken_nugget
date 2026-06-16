@@ -1,0 +1,21 @@
+{
+  "name": "take2",
+  "displayName": "take2",
+  "description": "take2",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "take2",
+        "uiTheme": "vs-dark",
+        "path": "./themes/take2-color-theme.json"
+      }
+    ]
+  }
+}

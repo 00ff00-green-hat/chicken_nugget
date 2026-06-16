@@ -8,3 +8,20 @@
 # https://www.idinheiro.com.br/calculadoras/calculadora-juros-compostos/
 
 print("Não")
+
+# Solicita o valor do depósito mensal fixo
+deposito_mensal = float(input("Digite o valor do depósito mensal (R$): "))
+taxa_juros = 0.005  # 0,5% ao mês
+saldo_atual = 0.0
+
+print("\nEvolução do saldo mês a mês:")
+print("-" * 30)
+
+# Simulação do rendimento ao longo de 24 meses
+for mes in range(1, 25):
+    # O depósito é feito no início do mês e rende juros
+    saldo_atual = (saldo_atual + deposito_mensal) * (1 + taxa_juros)
+    print(f"Mês {mes:02d}: R$ {saldo_atual:,.2f}")
+
+print("-" * 30)
+print(f"Valor total acumulado após 2 anos: R$ {saldo_atual:,.2f}")

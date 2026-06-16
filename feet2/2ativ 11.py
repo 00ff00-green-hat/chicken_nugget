@@ -13,3 +13,37 @@
 # 6 Cappuccino R$ 4,50
 # 7 Iogurte R$ 6,50
 # 8 Água R$ 2,50
+import sys
+aaa=0
+p=int(input("Digite o codigo do produto: "))
+q=int(input("Digite a quantidade do produto: "))
+if q==0:
+    sys.exit()
+elif p==1:
+    v=6*q
+    print("Suco R$ 6,00")
+    aaa=aaa+6
+elif p==2:
+    v=3*q
+    print("Pão de queijo R$ 3,00")
+elif p==3:
+    v=7*q
+    print("3 Pastel R$ 7,00")
+elif p==4:
+    v=9*q
+    print("Salada de frutas R$ 9,00")
+elif p==5:
+    v=3.5*q
+    print("Café com leite R$ 3,50")
+elif p==6:
+    v=4.5*q
+    print("Cappuccino R$ 4,50")
+elif p==7:
+    v=6.5*q
+    print("Iogurte R$ 6,50")
+elif p==8:
+    v=2.5*q
+    print("Água R$ 2,50")  
+else:
+    print("Burro")  
+
