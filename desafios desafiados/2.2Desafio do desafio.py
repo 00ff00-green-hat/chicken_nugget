@@ -9,8 +9,8 @@
 
 import subprocess
 
-subprocess.run(["git", "config", "--global", "user.name", f'"{un}"'])
-subprocess.run(["git", "config", "--global", "user.email", f'"{ue}"'])
+subprocess.run(["git", "config", "--global", "user.name", '"GreenHat-0f0"'])
+subprocess.run(["git", "config", "--global", "user.email", '"kiara.paasrosa@gmail.com"'])
 
 print("Executado com sucesso")
 print()
