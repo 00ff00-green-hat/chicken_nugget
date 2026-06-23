@@ -26,6 +26,8 @@
 # Entrega: arquivo desafio03.py + captura de tela mostrando o texto em português e a
 # tradução em inglês.
 
+import subprocess
+subprocess.run(["pip", "install", "deep_translator", "--quiet"])
 
 from deep_translator import GoogleTranslator
 texto= input("Traduzir: ")

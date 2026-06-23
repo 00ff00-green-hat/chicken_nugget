@@ -21,19 +21,21 @@
 # Esse é o exercício: ver na prática por que traduzir “em rodízio” não é a mesma coisa
 # que traduzir direto.
 
+import subprocess
+subprocess.run(["pip", "install", "deep_translator", "--quiet"])
 
 from deep_translator import GoogleTranslator
 texto= input("Traduzir: ")
 print(texto)
 map = {
-    1: "pt",     # Inglês
+    1: "pt",     # Português (Brasil)
     2: "es",     # Espanhol
-    3: "en",  # Português (Brasil)
+    3: "en",     # Inglês
     4: "fr",     # Francês
     5: "de",     # Alemão
     6: "it",     # Italiano
     7: "ja",     # Japonês
-    8: "tl",  # Chinês Simplificado
+    8: "tl",     # Chinês Simplificado
     9: "ko",     # Coreano
     10: "ru",    # Russo
     11: "ar",    # Árabe
@@ -55,7 +57,7 @@ map = {
     27: "cs",    # Checo
     28: "hu",    # Húngaro
     29: "ms",    # Malaio
-    30: "sw"  # Chinês Tradicional
+    30: "sw"     # Chinês Tradicional
 }
 y=1
 for i in (0, 29):
@@ -64,37 +66,4 @@ for i in (0, 29):
     y=y+1
     texto=GoogleTranslator(source=f"{x}", target=f"{z}").translate(texto)
 texto=GoogleTranslator(source=f"{z}", target="pt").translate(texto)
-
-        
-# transl=GoogleTranslator(source="pt", target="af").translate(texto)
-# transl=GoogleTranslator(source="af", target="sq").translate(transl)
-# transl=GoogleTranslator(source="sq", target="am").translate(transl)
-# transl=GoogleTranslator(source="am", target="ar").translate(transl)
-# transl=GoogleTranslator(source="ar", target="hy").translate(transl)
-# transl=GoogleTranslator(source="hy", target="as").translate(transl)
-# transl=GoogleTranslator(source="as", target="az").translate(transl)
-# transl=GoogleTranslator(source="az", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
-# transl=GoogleTranslator(source="pt", target="en").translate(transl)
 print(texto)
