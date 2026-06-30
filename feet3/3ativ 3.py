@@ -25,10 +25,10 @@ def grah():
         
         """)
     pdts = [-1]*10
-    n = -1
+    n = 0
     x = int(input("Digite uma opção: "))
     if x == 1:
-        def AAA():
+        def AAA(n):
             cadastro = int(input("Digite o código do produto que você deseja cadastrar: "))
             if cadastro != -1:
                 pdts[n] = cadastro
@@ -36,7 +36,9 @@ def grah():
             else:
                 print("ESCOLHA OUTRO NOME, TOLO!!!")
                 AAA()
-        AAA()
+
+            return n
+        n = AAA(n)
         grah()
     elif x == 2:
         for i in pdts:
